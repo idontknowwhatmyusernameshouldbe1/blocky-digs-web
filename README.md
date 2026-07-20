@@ -6,7 +6,14 @@ Browser client for **Blocky Digs** that **cross-plays** with the PC MonoGame gam
 
 **https://idontknowwhatmyusernameshouldbe1.github.io/blocky-digs-web/**
 
-(First visit after deploy may take a minute while Actions finishes.)
+### One-time setup (if the site 404s)
+
+1. Wait for the green **Deploy GitHub Pages** check on `main`.
+2. Repo **Settings → Pages**
+3. **Source:** Deploy from a branch
+4. **Branch:** `gh-pages` / `/ (root)` → Save
+
+Then open the URL above.
 
 ## Run locally
 
