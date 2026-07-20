@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Blocky Digs Web</title>
+    <script type="module" crossorigin src="/blocky-digs-web/assets/index-DJMWryDn.js"></script>
+    <link rel="stylesheet" crossorigin href="/blocky-digs-web/assets/index-DZ0Q7I1-.css">
+  </head>
+  <body>
+    <div id="menu">
+      <h1>Blocky Digs</h1>
+      <p class="sub">Web · cross-play with PC</p>
+
+      <div class="row">
+        <button id="btnScan" type="button">Scan LAN for servers</button>
+      </div>
+      <div id="serverList" class="server-list"></div>
+
+      <label>
+        Or type host IP
+        <input id="hostIp" type="text" value="127.0.0.1" spellcheck="false" />
+      </label>
+      <button id="btnJoin" type="button">Join</button>
+      <p id="status" class="hint">On PC press <b>2 Host LAN + WEB</b>, then Scan (or join 127.0.0.1 on the same PC).</p>
+    </div>
+    <div id="hud" class="hidden">
+      <div id="crosshair"></div>
+      <div id="topHint">Click to capture mouse · Esc release · T chat · LMB punch/dig · RMB place</div>
+      <div id="hp"></div>
+      <div id="hotbar"></div>
+      <div id="chatLog"></div>
+      <div id="chatBox" class="hidden">
+        <input id="chatInput" maxlength="80" placeholder="Say something…" />
+      </div>
+
+      <div id="touchControls" class="touch-controls hidden">
+        <div id="lookZone" class="look-zone" aria-hidden="true"></div>
+        <div id="stickBase" class="stick-base" aria-label="Move">
+          <div id="stickKnob" class="stick-knob"></div>
+        </div>
+        <div class="touch-actions">
+          <button type="button" class="touch-btn" data-touch-action="chat">Chat</button>
+          <button type="button" class="touch-btn" data-touch-action="sprint">Sprint</button>
+          <button type="button" class="touch-btn big" data-touch-action="jump">Jump</button>
+          <button type="button" class="touch-btn dig" data-touch-action="dig">Dig</button>
+          <button type="button" class="touch-btn place" data-touch-action="place">Place</button>
+        </div>
+      </div>
+    </div>
+    <canvas id="game"></canvas>
+  </body>
+</html>
