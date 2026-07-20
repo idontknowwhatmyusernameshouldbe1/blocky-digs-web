@@ -2,11 +2,13 @@
 
 Browser client for **Blocky Digs** that **cross-plays** with the PC MonoGame game over WebSockets.
 
-## Cross-play (PC host + web join)
+## Play online (GitHub Pages)
 
-1. On PC, run Blocky Digs and press **2 Host LAN**.
-2. Note the IP in the window title / HUD (also opens **web port 7778**).
-3. Here:
+**https://idontknowwhatmyusernameshouldbe1.github.io/blocky-digs-web/**
+
+(First visit after deploy may take a minute while Actions finishes.)
+
+## Run locally
 
 ```bash
 cd blocky-digs-web
@@ -14,10 +16,13 @@ npm install
 npm run dev
 ```
 
-4. Open the URL Vite prints → it **auto-scans** the LAN, or click **Scan LAN for servers**.
-5. Click a found host (or type an IP and Join).
+## Cross-play (PC host + web join)
 
-Discovery uses HTTP port **7779** (PC advertises). Gameplay uses WebSocket **7778**.
+1. On PC, run Blocky Digs and press **2 Host LAN + WEB**.
+2. Open the Pages URL (or local `npm run dev`).
+3. **Scan LAN** or type the PC IP and Join.
+
+Discovery uses HTTP **7779**. Gameplay uses WebSocket **7778**. PC peers use TCP **7777**.
 
 ## Controls
 
@@ -45,5 +50,5 @@ Discovery uses HTTP port **7779** (PC advertises). Gameplay uses WebSocket **777
 ## Notes
 
 - Web cannot host LAN by itself (browsers can’t listen); the **PC hosts**.
-- Allow firewall for ports **7777** and **7778** when playing on a network.
+- Allow firewall for **7777**, **7778**, and **7779** on a network.
 - Terrain generation matches the PC seed algorithm so everyone sees the same world.

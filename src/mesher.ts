@@ -48,7 +48,7 @@ export async function loadAtlas(): Promise<THREE.Texture> {
             res();
           };
           img.onerror = () => rej(new Error(n));
-          img.src = `/textures/${n}.png`;
+          img.src = `${import.meta.env.BASE_URL}textures/${n}.png`;
         }),
     ),
   );

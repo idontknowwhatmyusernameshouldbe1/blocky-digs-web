@@ -602,7 +602,7 @@ export class Game {
       const slot = document.createElement('div');
       slot.className = 'slot' + (i === this.hotbar ? ' sel' : '');
       const img = document.createElement('img');
-      img.src = `/textures/${n}.png`;
+      img.src = `${import.meta.env.BASE_URL}textures/${n}.png`;
       img.alt = n;
       slot.appendChild(img);
       slot.addEventListener('pointerdown', (e) => {
